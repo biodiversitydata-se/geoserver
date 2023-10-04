@@ -50,7 +50,7 @@ curl -u $USERNAME:$PASS -XPUT -H 'Content-type: text/xml' -d '<layer><defaultSty
 
 #upload icon
 wget -O /tmp/marker.png https://github.com/AtlasOfLivingAustralia/spatial-database/raw/master/marker.png
-#NOT sure if GeoServer allows to upload png to ./styles. May need to use ftp service
+curl -u $USERNAME:$PASS -XPUT -H 'Content-type: image/png' -d @/tmp/marker.png $GEOSERVER_URL/rest/resource/styles/marker.png
 
 
 echo ""

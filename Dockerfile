@@ -2,9 +2,6 @@ FROM kartoza/geoserver:2.23.2
 
 RUN apt-get -y update && apt-get install -y wget netcat
 
-RUN mkdir -p /data/geoserver_data_dir
-COPY data/ /data/geoserver_data_dir/
-
 RUN mkdir -p /data/geoserver_data_dir/gwc \
   /data/geoserver_data_dir/footprints_dir \
   /data/geoserver_data_dir/GeoNetwork_opensource \

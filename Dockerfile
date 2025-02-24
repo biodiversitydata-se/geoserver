@@ -1,6 +1,4 @@
-FROM kartoza/geoserver:2.23.2
-
-RUN apt-get -y update && apt-get install -y wget netcat
+FROM kartoza/geoserver:2.26.1
 
 RUN mkdir -p /data/geoserver_data_dir/gwc \
   /data/geoserver_data_dir/footprints_dir \
